@@ -1,0 +1,8 @@
+include README.md LICENSE NOTICE SECURITY.md CONTRIBUTING.md CHANGELOG.md
+include session-doctor
+recursive-include docs *.md
+include upstream/claude-minimal.jsonl
+include upstream/claude_compaction_regression.rs
+include upstream/run-repro.sh
+include upstream/README.md
+include examples/synthetic-report.json examples/synthetic-recovery-validation.json

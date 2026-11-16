@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codex-session-doctor"
+dynamic = ["version"]
+description = "Offline diagnostics and opt-in checkpoint recovery for Claude Code sessions imported into Codex"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+dependencies = []
+
+[project.scripts]
+session-doctor = "session_doctor:main"
+
+[tool.setuptools]
+py-modules = [
+  "session_doctor", "checkpoint_recovery", "live_thread", "native_verifier",
+  "recovery_state", "recovery_workflow",
+]
+packages = ["session_doctor_native"]
+
+[tool.setuptools.package-data]
+session_doctor_native = ["reconstruction_test.rs"]
+
+[tool.setuptools.dynamic]
+version = {attr = "session_doctor.VERSION"}

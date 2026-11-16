@@ -1,0 +1,28 @@
+{
+  "codex_main_commit": "0184dfa6a48f0110dd9c6835522492908e5abcf3",
+  "metrics": {
+    "after": {
+      "estimated_tokens": 147,
+      "normalized_model_items": 7
+    },
+    "before": {
+      "estimated_tokens": 972,
+      "normalized_model_items": 10
+    },
+    "startup": {
+      "covered_history_estimate_tokens": 138,
+      "eligible_import_estimate": true,
+      "original_import_estimate_tokens": 750000,
+      "post_import_response_items": 3,
+      "post_import_rollout_items": 8,
+      "selected_last_usage_tokens": 138,
+      "startup_context_usage_tokens": 147,
+      "total_replayed_history_estimate_tokens": 147,
+      "unreported_tail_estimate_tokens": 9,
+      "uses_local_rebase": true
+    }
+  },
+  "native_test": "session::tests::session_doctor_native_reconstruction",
+  "original_rollout_preserved": true,
+  "status": "NATIVE_VALIDATED"
+}

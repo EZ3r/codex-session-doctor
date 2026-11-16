@@ -1,0 +1,156 @@
+{
+  "association": {
+    "ledger_mapping": "unique",
+    "rollout_header": "thread_id_match",
+    "runtime_selected_rollout": "not_checked",
+    "source_sha256": "match"
+  },
+  "budgets": {
+    "effective_history_items": null,
+    "effective_history_tokens": null
+  },
+  "checkpoint_validation_scope": "local wire checks and replay field gate; no provider validation",
+  "claude": {
+    "boundary_count": 2,
+    "boundary_lines": [
+      3,
+      7
+    ],
+    "final_line_without_newline": false,
+    "latest_markers_form_valid_pair": true,
+    "latest_pair_summary_and_tail_projection": {
+      "estimated_model_bytes": 77,
+      "estimated_tokens": 20,
+      "items": 2,
+      "items_with_additional_projection_uncertainty": 0
+    },
+    "lines": 10,
+    "logical_history": {
+      "logical_tail_items": 1,
+      "preserved_projection": {
+        "estimated_model_bytes": 34,
+        "estimated_tokens": 9,
+        "items": 2,
+        "items_with_additional_projection_uncertainty": 0
+      },
+      "preserved_source_lines": [
+        5,
+        6
+      ],
+      "summary_preserved_and_logical_tail_projection": {
+        "estimated_model_bytes": 111,
+        "estimated_tokens": 28,
+        "items": 4,
+        "items_with_additional_projection_uncertainty": 0
+      }
+    },
+    "logical_history_error": null,
+    "paired_checkpoint_count": 2,
+    "paired_checkpoints": [
+      {
+        "attachment_chain_records": 0,
+        "before_boundary_import_projection": {
+          "estimated_model_bytes": 51,
+          "estimated_tokens": 13,
+          "items": 2,
+          "items_with_additional_projection_uncertainty": 0
+        },
+        "boundary_line": 3,
+        "has_preserved_segment": false,
+        "parent_verified": true,
+        "summary_line": 4,
+        "summary_skipped_by_importer_as_meta": false
+      },
+      {
+        "attachment_chain_records": 1,
+        "before_boundary_import_projection": {
+          "estimated_model_bytes": 3727,
+          "estimated_tokens": 932,
+          "items": 5,
+          "items_with_additional_projection_uncertainty": 0
+        },
+        "boundary_line": 7,
+        "has_preserved_segment": true,
+        "parent_verified": true,
+        "summary_line": 9,
+        "summary_skipped_by_importer_as_meta": false
+      }
+    ],
+    "sidechain_marker_count": 0,
+    "summary_count": 2,
+    "summary_lines": [
+      4,
+      9
+    ],
+    "unbounded_import_projection": {
+      "estimated_model_bytes": 3804,
+      "estimated_tokens": 951,
+      "items": 7,
+      "items_with_additional_projection_uncertainty": 0
+    }
+  },
+  "claude_diagnostics": {
+    "blocking_count": 0,
+    "counts": {},
+    "samples": []
+  },
+  "codex": {
+    "all_response_history_without_checkpoints": {
+      "estimated_model_bytes": 3865,
+      "estimated_tokens": 967,
+      "items": 10,
+      "items_with_additional_projection_uncertainty": 2
+    },
+    "before_latest_checkpoint": null,
+    "compacted_count": 0,
+    "compacted_lines": [],
+    "decoded_compacted_count": 0,
+    "effective_replayed_history": {
+      "estimated_model_bytes": 3865,
+      "estimated_tokens": 967,
+      "items": 10,
+      "items_with_additional_projection_uncertainty": 2
+    },
+    "final_line_without_newline": false,
+    "history_mode": "legacy",
+    "import_marker_count": 1,
+    "import_marker_line": 10,
+    "latest_checkpoint": null,
+    "lines": 20,
+    "model_items_after_last_import_marker": 3,
+    "recorded_context_windows_tokens": [
+      475000
+    ],
+    "replayed_replacement_line": null,
+    "rollbacks": 0,
+    "session_meta_lines": [
+      1,
+      20
+    ],
+    "source_summary_as_ordinary_user_lines_before_last_marker": [
+      7
+    ],
+    "suffix_after_latest_checkpoint": null
+  },
+  "codex_diagnostics": {
+    "blocking_count": 0,
+    "counts": {},
+    "samples": []
+  },
+  "codex_main_commit": "0184dfa6a48f0110dd9c6835522492908e5abcf3",
+  "confidence": "high",
+  "diagnosis": "SOURCE_CHECKPOINT_LOST",
+  "discovery": {
+    "ledger_entries_outside_claude_projects": 0,
+    "other_compressed_rollouts_not_indexed": 0,
+    "rollout_directory_scan_incomplete": false,
+    "unreadable_rollout_headers": 0,
+    "unsafe_ledger_entries": 0
+  },
+  "evidence": [
+    "VALID_CLAUDE_PAIR_NO_CODEX_COMPACTED_ITEM",
+    "CLAUDE_SUMMARY_MATCHES_IMPORTED_ORDINARY_USER_ITEM"
+  ],
+  "schema_version": 1,
+  "token_estimator": "ceil(model_visible_utf8_bytes / 4); no provider tokenizer or injected context"
+}

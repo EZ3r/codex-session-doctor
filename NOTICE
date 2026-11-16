@@ -1,0 +1,20 @@
+OpenAI Codex
+Copyright 2025 OpenAI
+
+This project includes code derived from [Ratatui](https://github.com/ratatui/ratatui), licensed under the MIT license.
+Copyright (c) 2016-2022 Florian Dehau
+Copyright (c) 2023-2025 The Ratatui Developers
+
+Codex Session Doctor
+This independent project interoperates with OpenAI Codex. The preceding
+notice is retained from the pinned upstream OpenAI Codex revision
+0184dfa6a48f0110dd9c6835522492908e5abcf3. The checkpoint summary prefix is
+from codex-rs/prompts/src/compact.rs at that revision. The local Rust
+harness is added in a disposable build checkout and exercises the native
+Codex implementation. No upstream source checkout or compiled binary
+is distributed in this package.
+
+Design reference: mh0pe/codex pull request #1,
+https://github.com/mh0pe/codex/pull/1/files
+Reference patch commit 16236b45d9dc4aedf119b3083ecf537dfb56251f.
+The patch files are not included.
