@@ -34,7 +34,7 @@ jobs:
 
   native:
     runs-on: macos-15
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
@@ -47,7 +47,27 @@ jobs:
           node-version: "22"
           package-manager-cache: false
       - name: Build pinned verifier
-        run: ./session-doctor validator-build
+        env:
+          CARGO_BUILD_JOBS: "2"
+          CARGO_INCREMENTAL: "0"
+        run: |
+          export SESSION_DOCTOR_REAL_CARGO="$(command -v cargo)"
+          test -x "$SESSION_DOCTOR_REAL_CARGO"
+          export SESSION_DOCTOR_CARGO_LOG="$RUNNER_TEMP/session-doctor-cargo.log"
+          shim="$RUNNER_TEMP/session-doctor-cargo-bin"
+          mkdir -p "$shim"
+          cat > "$shim/cargo" <<'SH'
+          #!/bin/sh
+          exec "$SESSION_DOCTOR_REAL_CARGO" "$@" 2>>"$SESSION_DOCTOR_CARGO_LOG"
+          SH
+          chmod +x "$shim/cargo"
+          if ! PATH="$shim:$PATH" ./session-doctor validator-build; then
+            if [ -f "$SESSION_DOCTOR_CARGO_LOG" ]; then
+              tail -n 100 "$SESSION_DOCTOR_CARGO_LOG"
+            fi
+            df -h "$RUNNER_TEMP"
+            exit 1
+          fi
       - name: Require native reconstruction tests
         run: |
           verifier=$(python -B -c 'from types import SimpleNamespace; from native_verifier import find_verifier; print(find_verifier(SimpleNamespace(), required=True))')
