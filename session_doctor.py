@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Offline diagnostics for local Claude Code -> Codex imports (Python 3.10+)."""
+"""Offline diagnostics for local Claude Code -> Codex imports (Python 3.11+)."""
 from __future__ import annotations
 
 import argparse
@@ -16,7 +16,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Callable
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 UPSTREAM = "0184dfa6a48f0110dd9c6835522492908e5abcf3"
 MARKER = "<EXTERNAL SESSION IMPORTED>"
 LEDGER = "external_agent_session_imports.json"

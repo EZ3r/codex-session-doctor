@@ -1,4 +1,4 @@
-include README.md LICENSE NOTICE SECURITY.md CONTRIBUTING.md CHANGELOG.md
+include README.md README.zh-CN.md LICENSE NOTICE SECURITY.md CONTRIBUTING.md CHANGELOG.md
 include session-doctor
 recursive-include docs *.md
 include upstream/claude-minimal.jsonl

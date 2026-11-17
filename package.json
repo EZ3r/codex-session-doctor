@@ -1,0 +1,55 @@
+{
+  "name": "codex-session-doctor",
+  "version": "0.2.0",
+  "description": "Read-only diagnostics and checkpoint-aware recovery for Claude Code sessions imported into Codex",
+  "bin": {
+    "session-doctor": "bin/session-doctor.js"
+  },
+  "files": [
+    "bin/session-doctor.js",
+    "session_doctor.py",
+    "checkpoint_recovery.py",
+    "live_thread.py",
+    "native_verifier.py",
+    "recovery_state.py",
+    "recovery_workflow.py",
+    "session_doctor_native/__init__.py",
+    "session_doctor_native/reconstruction_test.rs",
+    "README.zh-CN.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "docs/dependencies.md",
+    "docs/synthetic-recovery.md",
+    "docs/synthetic-recovery.zh-CN.md",
+    "docs/npm-release.md",
+    "NOTICE"
+  ],
+  "scripts": {
+    "test": "node --test tests/npm.test.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EZ3r/codex-session-doctor.git"
+  },
+  "homepage": "https://github.com/EZ3r/codex-session-doctor#readme",
+  "bugs": {
+    "url": "https://github.com/EZ3r/codex-session-doctor/issues"
+  },
+  "keywords": [
+    "codex",
+    "claude-code",
+    "session-recovery",
+    "compaction",
+    "checkpoint",
+    "cli"
+  ]
+}
