@@ -33,15 +33,14 @@ Session Doctor 先核对本地导入账本和源历史，再根据已验证的 C
 
 ### npm（首选）
 
-**`codex-session-doctor` 发布到 npm 之后**，使用下面的命令。
+从 [npm 公开注册表](https://www.npmjs.com/package/codex-session-doctor)全局安装。
 
 ```sh
 npm install -g codex-session-doctor
 session-doctor --version
-session-doctor --help
 ```
 
-发布之前，可以进入含有 `package.json` 的项目检出目录，从本地 tarball 安装。
+如需安装源码构建的版本，可在含有 `package.json` 的项目检出目录中打包并安装。
 
 ```sh
 npm pack

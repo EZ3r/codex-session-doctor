@@ -33,15 +33,14 @@ Windows is currently unsupported. Automated recovery supports a uniquely mapped,
 
 ### npm
 
-Use the following commands **after `codex-session-doctor` is published to npm**.
+Install globally from the [public npm Registry](https://www.npmjs.com/package/codex-session-doctor).
 
 ```sh
 npm install -g codex-session-doctor
 session-doctor --version
-session-doctor --help
 ```
 
-To try the npm distribution before publication, run these commands from a checkout that contains `package.json`.
+To install a local build, run these commands from a checkout that contains `package.json`.
 
 ```sh
 npm pack
